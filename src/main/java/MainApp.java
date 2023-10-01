@@ -2,22 +2,32 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        int number = 10;
-        System.out.println(number);
+//        Arithmetic Operqators
+        double a = 10;
+        double b = 4;
+        System.out.println(10 + 10);
+        System.out.println(10 - 10);
+        System.out.println(10 * 10);
+        System.out.println(10 / 10);
+        System.out.println(a / b);
 
-        double doubleNumber = 10.5;
-        System.out.println(doubleNumber);
+//        Relational Operators
+        int numOne = 1;
+        int numTwo = 2;
+        System.out.println(numOne > numTwo);
+        System.out.println(numOne < numTwo);
+        System.out.println(numOne == numTwo);
+        System.out.println(numOne != numTwo);
 
-        String someText = "text in java";
-        System.out.println(someText);
+//        Logical Operators
+//        || OR
+        System.out.println(numOne > numTwo || numOne == 1 ); // false || true -> true
+        System.out.println(numOne > numTwo || numOne != 1 ); // false || false -> false
+        System.out.println(numOne < numTwo || numOne != 1 ); // true || not checked -> true
 
-        char someChar = 'd';
-        System.out.println(someChar);
-
-        boolean trueValue = true;
-        System.out.println(trueValue);
-
-        boolean falseValue = false;
-        System.out.println(falseValue);
+//        && AND
+        System.out.println(numOne < numTwo && numOne == 1 ); // true AND true -> true
+        System.out.println(numOne > numTwo && numOne == 1 ); // false AND true -> false
+        System.out.println(numOne > numTwo && numOne != 1 ); // false AND false -> false
     }
 }
