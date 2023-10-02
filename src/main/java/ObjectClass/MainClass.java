@@ -10,7 +10,8 @@ public class MainClass {
         bartek.email = "bartek@test.pl";
         bartek.age = 17;
         bartek.isAdult = false;
-        System.out.println(bartek.firstName);
+        bartek.fullName();
+        bartek.getAllInfo();
 
         User tomek = new User();
         tomek.firstName = "Tomek";
@@ -18,6 +19,7 @@ public class MainClass {
         tomek.email = "tomek.nowy@test.com";
         tomek.age = 30;
         tomek.isAdult = true;
-        System.out.println(tomek.email);
+        tomek.fullName();
+        tomek.getAllInfo();
     }
 }
