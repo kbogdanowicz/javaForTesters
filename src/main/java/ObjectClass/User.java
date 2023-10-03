@@ -15,4 +15,16 @@ public class User {
     void getAllInfo() {
         System.out.println(firstName + " " + lastName + " " + email + " " + age + " " + isAdult);
     }
+
+    int getUserAge() {
+        return age;
+    }
+
+    boolean isUserAdult() {
+        if (age >= 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

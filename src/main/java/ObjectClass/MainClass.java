@@ -13,6 +13,13 @@ public class MainClass {
         bartek.fullName();
         bartek.getAllInfo();
 
+        int userAge = bartek.getUserAge();
+        System.out.println(userAge);
+
+        boolean userAdult = bartek.isUserAdult();
+        System.out.println("Is bartek adult: " + userAdult);
+
+
         User tomek = new User();
         tomek.firstName = "Tomek";
         tomek.lastName = "Nowy";
@@ -21,5 +28,11 @@ public class MainClass {
         tomek.isAdult = true;
         tomek.fullName();
         tomek.getAllInfo();
+
+        int tomekAge = tomek.getUserAge();
+        System.out.println(tomekAge);
+
+        boolean tomekAdult = tomek.isUserAdult();
+        System.out.println("Is tomek adult: " + tomekAdult);
     }
 }
