@@ -4,46 +4,11 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        User bartek = new User();
-        User bartek1 = new User("Bartek1", "Testowy1", "bartek1@test.pl", 25, true);
-        System.out.println("Bartek1 firstname: " + bartek1.firstName);
-        bartek.firstName = "Bartek";
-        bartek.lastName = "Testowy";
-        bartek.email = "bartek@test.pl";
-        bartek.age = 17;
-        bartek.isAdult = false;
-        bartek.fullName();
+        User bartek = new User("Bartek", "Testowy", "bartek@test.pl", 17);
         bartek.getAllInfo();
 
-        int userAge = bartek.getUserAge();
-        System.out.println(userAge);
-
-        boolean userAdult = bartek.isUserAdult();
-        System.out.println("Is bartek adult: " + userAdult);
-
-        bartek.greetings("Bartek");
-        bartek.greetings("Bartek", "Testowy");
-        bartek.howOldAreYou("Bartek", 17);
-
-        int bartekAgePlus10 = bartek.userAgePlus10(17);
-        System.out.println(bartekAgePlus10);
-
-
-        User tomek = new User();
-        tomek.firstName = "Tomek";
-        tomek.lastName = "Nowy";
-        tomek.email = "tomek.nowy@test.com";
-        tomek.age = 30;
-        tomek.isAdult = true;
-        tomek.fullName();
+        User tomek = new User("Tomek", "Nowy", "tomek.nowy@test.com", 30);
         tomek.getAllInfo();
 
-        int tomekAge = tomek.getUserAge();
-        System.out.println(tomekAge);
-
-        boolean tomekAdult = tomek.isUserAdult();
-        System.out.println("Is tomek adult: " + tomekAdult);
-
-        System.out.println(tomek.userAgePlus10(tomek.age));
     }
 }
