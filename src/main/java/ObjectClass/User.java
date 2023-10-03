@@ -32,6 +32,10 @@ public class User {
         System.out.println("Hi " + name + ", how are you?");
     }
 
+    void greetings(String firstName, String lastName) {
+        System.out.println("Hi " + firstName + " " + lastName + ", how are you?");
+    }
+
     void howOldAreYou(String userName, int userAge) {
         System.out.println("Hi " + userName + ", you are " + userAge + " years old");
     }

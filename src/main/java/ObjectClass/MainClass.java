@@ -20,6 +20,7 @@ public class MainClass {
         System.out.println("Is bartek adult: " + userAdult);
 
         bartek.greetings("Bartek");
+        bartek.greetings("Bartek", "Testowy");
         bartek.howOldAreYou("Bartek", 17);
 
         int bartekAgePlus10 = bartek.userAgePlus10(17);
