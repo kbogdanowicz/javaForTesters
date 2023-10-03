@@ -5,6 +5,8 @@ public class MainClass {
     public static void main(String[] args) {
 
         User bartek = new User();
+        User bartek1 = new User("Bartek1", "Testowy1", "bartek1@test.pl", 25, true);
+        System.out.println("Bartek1 firstname: " + bartek1.firstName);
         bartek.firstName = "Bartek";
         bartek.lastName = "Testowy";
         bartek.email = "bartek@test.pl";
