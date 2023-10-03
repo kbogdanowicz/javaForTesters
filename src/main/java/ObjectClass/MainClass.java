@@ -19,6 +19,12 @@ public class MainClass {
         boolean userAdult = bartek.isUserAdult();
         System.out.println("Is bartek adult: " + userAdult);
 
+        bartek.greetings("Bartek");
+        bartek.howOldAreYou("Bartek", 17);
+
+        int bartekAgePlus10 = bartek.userAgePlus10(17);
+        System.out.println(bartekAgePlus10);
+
 
         User tomek = new User();
         tomek.firstName = "Tomek";
@@ -34,5 +40,7 @@ public class MainClass {
 
         boolean tomekAdult = tomek.isUserAdult();
         System.out.println("Is tomek adult: " + tomekAdult);
+
+        System.out.println(tomek.userAgePlus10(tomek.age));
     }
 }

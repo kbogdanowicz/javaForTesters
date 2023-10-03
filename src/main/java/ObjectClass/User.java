@@ -27,4 +27,16 @@ public class User {
             return false;
         }
     }
+
+    void greetings(String name) {
+        System.out.println("Hi " + name + ", how are you?");
+    }
+
+    void howOldAreYou(String userName, int userAge) {
+        System.out.println("Hi " + userName + ", you are " + userAge + " years old");
+    }
+
+    int userAgePlus10(int userAge) {
+        return userAge + 10;
+    }
 }
