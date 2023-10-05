@@ -2,14 +2,14 @@ package ObjectClass;
 
 public class User {
 
-    String firstName; // null
-    String lastName; // null
-    String email; // null
-    int age; // 0
-    boolean isAdult; // false
+    private String firstName; // null
+    private String lastName; // null
+    private String email; // null
+    private  int age; // 0
+    private boolean isAdult; // false
 
 
-    User(String firstName, String lastName, String email, int age) {
+    public User(String firstName, String lastName, String email, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -17,19 +17,23 @@ public class User {
         this.isAdult = isUserAdult();
     }
 
-    void fullName() {
-        System.out.println(firstName + " " + lastName);
-    }
-
-    void getAllInfo() {
-        System.out.println(firstName + " " + lastName + " " + email + " " + age + " " + isAdult);
-    }
-
-    int getUserAge() {
+    public int getAge() {
         return age;
     }
 
-    boolean isUserAdult() {
+    public void fullName() {
+        System.out.println(firstName + " " + lastName);
+    }
+
+    public void getAllInfo() {
+        System.out.println(firstName + " " + lastName + " " + email + " " + age + " " + isAdult);
+    }
+
+    public int getUserAge() {
+        return age;
+    }
+
+    public boolean isUserAdult() {
         if (age >= 18) {
             return true;
         } else {
@@ -37,19 +41,19 @@ public class User {
         }
     }
 
-    void greetings(String name) {
+    public void greetings(String name) {
         System.out.println("Hi " + name + ", how are you?");
     }
 
-    void greetings(String firstName, String lastName) {
+    public void greetings(String firstName, String lastName) {
         System.out.println("Hi " + firstName + " " + lastName + ", how are you?");
     }
 
-    void howOldAreYou(String userName, int userAge) {
+    public void howOldAreYou(String userName, int userAge) {
         System.out.println("Hi " + userName + ", you are " + userAge + " years old");
     }
 
-    int userAgePlus10(int userAge) {
+    public int userAgePlus10(int userAge) {
         return userAge + 10;
     }
 }
