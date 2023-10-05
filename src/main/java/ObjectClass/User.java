@@ -17,6 +17,49 @@ public class User {
         this.isAdult = isUserAdult();
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int hetAge() {
+        return age;
+    }
+
+    public boolean isAdult() {
+        return isAdult;
+    }
+
+    public void setAdult(boolean adult) {
+        isAdult = adult;
+    }
+        public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        if (email.endsWith(".ru")) {
+            System.out.println("Ru emails are not allowed");
+        } else {
+            this.email = email;
+        }
+    }
+
     public int getAge() {
         return age;
     }
