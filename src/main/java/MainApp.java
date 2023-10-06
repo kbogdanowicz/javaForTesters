@@ -4,17 +4,43 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        User user = new User("Bartek", "Testowy", "bartek@test.pl", 17);
+       String str1 = "Hello";
+       String str2 = "hwllo";
 
-        System.out.println(user.getEmail());
+        System.out.println(str1.equals(str2));
+        System.out.println(str1.equalsIgnoreCase(str2));
 
-        user.setEmail("bartek@test.ru");
+        String upperCase = str1.toUpperCase();
+        System.out.println((upperCase));
 
-        System.out.println(user.getEmail());
+        String lowerCase = str1.toLowerCase();
+        System.out.println(lowerCase);
 
-        user.setEmail("bz@test.pl");
+        boolean startsWith = str1.startsWith("He");
+        System.out.println(startsWith);
 
-        System.out.println(user.getEmail());
+        System.out.println(str1.endsWith("lo"));
+        System.out.println(str1.endsWith("ll"));
+
+        System.out.println("    ".isBlank());
+        System.out.println("   ".isEmpty());
+
+        String replace = str1.replace("llo", "QWE");
+        System.out.println(replace);
+
+        String s = str1.replaceAll("l", "x");
+        System.out.println(s);
+
+        String substring = str1.substring(1, 4);
+        System.out.println(substring);
+
+        String textWithWhiteSpaces = "    This is some text    ";
+        System.out.println(textWithWhiteSpaces.length());
+
+        String strip = textWithWhiteSpaces.strip();
+        System.out.println(strip);
+        System.out.println(strip.length());
+
 
     }
 }
