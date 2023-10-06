@@ -50,7 +50,7 @@ public class MainApp {
             case "Login":
                 System.out.println("I switch to Login page");
                 break;
-            case "COntact":
+            case "Contact":
                 System.out.println("I switch to Contact page");
                 break;
             default:
