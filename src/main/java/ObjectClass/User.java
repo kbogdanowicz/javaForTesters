@@ -2,6 +2,7 @@ package ObjectClass;
 
 public class User {
 
+    public static int userCounter = 0;
     private String firstName; // null
     private String lastName; // null
     private String email; // null
@@ -15,6 +16,7 @@ public class User {
         this.email = email;
         this.age = age;
         this.isAdult = isUserAdult();
+        userCounter++;
     }
 
     public String getFirstName() {
