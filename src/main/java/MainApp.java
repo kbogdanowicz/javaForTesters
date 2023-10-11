@@ -1,5 +1,6 @@
 import ObjectClass.User;
 import Utils.StringUtils;
+import Utils.WeekUtils;
 
 public class MainApp {
 
@@ -10,5 +11,7 @@ public class MainApp {
 
      String bartek = StringUtils.getFormattedText("Bartek");
      System.out.println(bartek);
+
+     System.out.println(WeekUtils.MONDAY);
     }
 }
