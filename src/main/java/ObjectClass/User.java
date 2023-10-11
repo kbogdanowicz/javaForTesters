@@ -2,7 +2,7 @@ package ObjectClass;
 
 public class User {
 
-    public static int userCounter = 0;
+    private static int userCounter = 0;
     private String firstName; // null
     private String lastName; // null
     private String email; // null
@@ -100,5 +100,9 @@ public class User {
 
     public int userAgePlus10(int userAge) {
         return userAge + 10;
+    }
+
+    public static int getUserCounter() {
+        return userCounter;
     }
 }
