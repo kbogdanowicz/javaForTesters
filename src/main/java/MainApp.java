@@ -1,6 +1,5 @@
-import ObjectClass.User;
-import Utils.StringUtils;
-import Utils.WeekUtils;
+import utils.StringUtils;
+import utils.WeekUtils;
 
 public class MainApp {
 
