@@ -2,8 +2,12 @@ package model.computer;
 
 public class PC extends Computer{
 
-    public PC(String name, String type, int hdd, int ram) {
+    private boolean connectionToPower;
+
+    public PC(String name, String type, int hdd, int ram, boolean connectionToPower) {
+
         super(name, type, hdd, ram);
+        this.connectionToPower = connectionToPower;
     }
 
     public void showComputerName() {
@@ -13,6 +17,14 @@ public class PC extends Computer{
     @Override
     public void switchOn() {
         System.out.println("Checking power supply");
-        super.switchOn();
+        if (connectionToPower) {
+            super.switchOn();
+        } else {
+            System.out.println("Connect computer to power.");
+        }
+    }
+
+    public void setConnectionToPower(boolean connectionToPower) {
+        this.connectionToPower = connectionToPower;
     }
 }
