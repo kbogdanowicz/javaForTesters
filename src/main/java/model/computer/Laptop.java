@@ -9,6 +9,6 @@ public class Laptop extends Computer{
     @Override
     public void switchOn() {
         System.out.println("Checking power level");
-        state = true;
+        super.switchOn();
     }
 }

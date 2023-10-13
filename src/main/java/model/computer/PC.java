@@ -13,6 +13,6 @@ public class PC extends Computer{
     @Override
     public void switchOn() {
         System.out.println("Checking power supply");
-        state = true;
+        super.switchOn();
     }
 }
