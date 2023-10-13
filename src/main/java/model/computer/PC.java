@@ -6,4 +6,8 @@ public class PC extends Computer{
         super(name, type, hdd, ram);
     }
 
+    public void showComputerName() {
+        System.out.println(name);
+    }
+
 }

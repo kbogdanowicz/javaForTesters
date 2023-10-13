@@ -15,5 +15,7 @@ public class MainApp {
 
         gamingLaptorp.switchOn();
         System.out.println(gamingLaptorp.getState());
+
+        officeComputer.showComputerName();
     }
 }
