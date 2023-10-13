@@ -11,11 +11,7 @@ public class MainApp {
         Laptop gamingLaptorp = new Laptop("XGames", "HP GAMES", 500, 256);
 
         officeComputer.switchOn();
-        System.out.println(officeComputer.getState());
-
         gamingLaptorp.switchOn();
-        System.out.println(gamingLaptorp.getState());
 
-        officeComputer.showComputerName();
     }
 }

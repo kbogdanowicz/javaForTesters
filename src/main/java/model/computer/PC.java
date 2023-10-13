@@ -10,4 +10,9 @@ public class PC extends Computer{
         System.out.println(name);
     }
 
+    @Override
+    public void switchOn() {
+        System.out.println("Checking power supply");
+        state = true;
+    }
 }
