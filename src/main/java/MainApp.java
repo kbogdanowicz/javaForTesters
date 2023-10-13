@@ -1,3 +1,5 @@
+import model.computer.Laptop;
+import model.computer.PC;
 import utils.StringUtils;
 import utils.WeekUtils;
 
@@ -5,12 +7,13 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-     String bartekTestowy = StringUtils.getFormattedText("BartekTestowy");
-     System.out.println(bartekTestowy);
+        PC officeComputer = new PC("Office Computer", "HP", 500, 128);
+        Laptop gamingLaptorp = new Laptop("XGames", "HP GAMES", 500, 256);
 
-     String bartek = StringUtils.getFormattedText("Bartek");
-     System.out.println(bartek);
+        officeComputer.switchOn();
+        System.out.println(officeComputer.getState());
 
-     System.out.println(WeekUtils.MONDAY);
+        gamingLaptorp.switchOn();
+        System.out.println(gamingLaptorp.getState());
     }
 }
