@@ -9,6 +9,9 @@ public class PC extends Computer{
         isPowerSupply = false;
     }
 
+    public int volumeUp() {
+        return volumeLevel +=1;
+    }
     public void showComputerName() {
         System.out.println(name);
     }

@@ -9,6 +9,9 @@ public class Laptop extends Computer{
         this.batteryLevel = batteryLevel;
     }
 
+    public int volumeUp() {
+        return volumeLevel += 5;
+    }
     @Override
     public void switchOn() {
         System.out.println("Checking power level");
