@@ -10,8 +10,19 @@ public class PC extends Computer{
     }
 
     public int volumeUp() {
-        return volumeLevel +=1;
+        return volumeLevel += 1;
     }
+
+    @Override
+    public int volumeDown() {
+        volumeLevel -=1;
+        if (volumeLevel <= 0) {
+            return 0;
+        } else {
+            return volumeLevel;
+        }
+    }
+
     public void showComputerName() {
         System.out.println(name);
     }
