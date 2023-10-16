@@ -54,7 +54,7 @@ public class Computer {
     }
 
     public void switchOff() {
-        System.out.println("Swiched off computer:" + name);
+        System.out.println("Switched off computer:" + name);
         state = false;
     }
 

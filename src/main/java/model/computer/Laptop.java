@@ -19,6 +19,12 @@ public class Laptop extends Computer{
         }
 
     }
+
+    public void switchOff() {
+        System.out.println("Switched off laptop:" + name);
+        state = false;
+    }
+
     public void setBatteryLevel(int batteryLevel) {
         this.batteryLevel = batteryLevel;
     }

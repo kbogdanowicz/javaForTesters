@@ -23,6 +23,11 @@ public class PC extends Computer{
         }
     }
 
+    public void switchOff() {
+        System.out.println("Switched off PC:" + name);
+        state = false;
+    }
+
     public void setPowerSupply(boolean powerSupply) {
         isPowerSupply = powerSupply;
     }
