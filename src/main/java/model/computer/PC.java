@@ -1,6 +1,6 @@
 package model.computer;
 
-public class PC extends Computer{
+public class PC extends Computer implements Music, Video {
 
     private boolean isPowerSupply;
 
@@ -25,7 +25,7 @@ public class PC extends Computer{
 
     @Override
     public int volumeDown() {
-        volumeLevel -=1;
+        volumeLevel -= 1;
         if (volumeLevel <= 0) {
             return 0;
         } else {
@@ -38,7 +38,7 @@ public class PC extends Computer{
         volumeLevel = volumeLevel - volumeDown;
         if (volumeLevel < 0) {
             return 0;
-        } else  {
+        } else {
             return volumeLevel;
         }
     }
@@ -64,5 +64,35 @@ public class PC extends Computer{
 
     public void setPowerSupply(boolean powerSupply) {
         isPowerSupply = powerSupply;
+    }
+
+    @Override
+    public void playMusic() {
+        System.out.println("PLAY MUSIC");
+    }
+
+    @Override
+    public void pauseMusic() {
+        System.out.println("PAUSE MUSIC");
+    }
+
+    @Override
+    public void stopMusic() {
+        System.out.println("STOP MUSIC");
+    }
+
+    @Override
+    public void playVideo() {
+        System.out.println("PLAY VIDEO");
+    }
+
+    @Override
+    public void pauseVideo() {
+        System.out.println("PAUSE VIDEO");
+    }
+
+    @Override
+    public void stopVideo() {
+        System.out.println("STOP VIDEO");
     }
 }
