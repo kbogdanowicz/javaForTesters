@@ -6,7 +6,7 @@ public interface Music {
     void pauseMusic();
     void stopMusic();
 
-    default void sayHelloFromMusic() {
-        System.out.println("Hello from default");
+    default void sayHello() {
+        System.out.println("Hello from Music default");
     }
 }

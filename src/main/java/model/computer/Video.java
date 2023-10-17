@@ -6,7 +6,7 @@ public interface Video {
     void pauseVideo();
     void stopVideo();
 
-    default void sayHelloFromVideo() {
-        System.out.println("Hello from default");
+    default void sayHello() {
+        System.out.println("Hello from Video default");
     }
 }
