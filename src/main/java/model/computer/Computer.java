@@ -61,7 +61,11 @@ abstract public class Computer {
     }
 
     public abstract int volumeUp();
+
+    public abstract int volumeUp(int volumeUp);
     public abstract int volumeDown();
+
+    public abstract int volumeDown(int volumeDown);
 
     public boolean getState() {
         return state;
