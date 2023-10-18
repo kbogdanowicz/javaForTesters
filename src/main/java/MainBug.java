@@ -1,22 +1,17 @@
-import Exercise2Class.Bug;
+import model.Bug;
+import model.BugReporter;
 
 public class MainBug {
 
     public static void main(String[] args) {
 
-        Bug bug1 = new Bug("Submit button is not working", "bartek@test.pl", 4);
+        BugReporter reporter = new BugReporter("Bartek", "Testowy", "b@test.pl");
+        Bug bug = new Bug("Submit button is not working", new BugReporter("Bartek", "Testowy", "b@test.pl"), 4);
 
-        bug1.setBugDescription("Short.");
-        bug1.setEmail("bartek.test.pl");
-        bug1.setBugPriority(7);
+        System.out.println(bug);
 
-        bug1.setBugDescription("Error on start page");
-        bug1.setEmail("bartek.z@test.pl");
-        bug1.setBugPriority(3);
+        bug.setBugStatus(true);
 
-        bug1.showAllBugInfo();
-
-
-
+        System.out.println(bug);
     }
 }
