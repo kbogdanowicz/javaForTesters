@@ -39,10 +39,6 @@ public class User {
         this.age = age;
     }
 
-    public int hetAge() {
-        return age;
-    }
-
     public boolean isAdult() {
         return isAdult;
     }
@@ -104,5 +100,16 @@ public class User {
 
     public static int getUserCounter() {
         return userCounter;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", age=" + age +
+                ", isAdult=" + isAdult +
+                '}';
     }
 }
