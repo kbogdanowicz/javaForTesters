@@ -6,17 +6,22 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        List<User> users = new ArrayList<>();
+        Set<String> names = new HashSet<>();
 
-        users.add(new User("Bartek", "Testowy", "bk@test.pl", 27));
-        users.add(new User("Tomek", "Testowy", "bk@test.pl", 37));
-        users.add(new User("Asia", "Testowy", "bk@test.pl", 10));
-        users.add(new User("Piotr", "Testowy", "bk@test.pl", 17));
+        names.add("Bartek");
+        names.add("Mirek");
+        names.add("Piotrek");
+        names.add("Tomek");
+        names.add("Asia");
+        names.add("Bartek");
 
-        Collections.sort(users, Comparator.comparing(User::getUserAge));
+        System.out.println(names.size());
 
-        for (User user : users) {
-            System.out.println(user.getFirstName() + " " + user.getAge());
+        Set<String> sortedNames = new TreeSet<>(names);
+
+        for (String name: sortedNames
+             ) {
+            System.out.println(name);
         }
     }
 }
