@@ -6,22 +6,20 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        Set<String> names = new HashSet<>();
+        Map<Integer, String> names = new HashMap<>();
 
-        names.add("Bartek");
-        names.add("Mirek");
-        names.add("Piotrek");
-        names.add("Tomek");
-        names.add("Asia");
-        names.add("Bartek");
+        names.put(10, "Bartek10");
+        names.put(0, "Bartek0");
+        names.put(1, "Bartek1");
+        names.put(20, "Bartek20");
+        names.put(5, "Bartek5");
 
-        System.out.println(names.size());
+        System.out.println(names);
 
-        Set<String> sortedNames = new TreeSet<>(names);
-
-        for (String name: sortedNames
-             ) {
-            System.out.println(name);
+        for (Map.Entry<Integer, String> name : names.entrySet()) {
+            System.out.println(name.getKey() + " " + name.getValue());
         }
+
     }
+
 }
