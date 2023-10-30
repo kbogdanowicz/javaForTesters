@@ -2,7 +2,9 @@ package model;
 
 import model.BugReporter;
 
-public class Bug implements ConsoleNotification {
+import java.util.Objects;
+
+public class Bug implements ConsoleNotification, Comparable<Bug> {
 
     private String bugDescription;
     private BugReporter bugreporter;
@@ -21,7 +23,7 @@ public class Bug implements ConsoleNotification {
     }
 
     public void setBugDescription(String bugDescription) {
-        if (bugDescription.length()<10) {
+        if (bugDescription.length() < 10) {
             System.out.println("Bug description need to have mote than 10 chars");
         } else {
             this.bugDescription = bugDescription;
@@ -83,7 +85,25 @@ public class Bug implements ConsoleNotification {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bug bug = (Bug) o;
+        return bugPriority == bug.bugPriority && bugStatus == bug.bugStatus && Objects.equals(bugDescription, bug.bugDescription) && Objects.equals(bugreporter, bug.bugreporter);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bugDescription, bugreporter, bugPriority, bugStatus);
+    }
+
+    @Override
     public void notifyStatusChange() {
         System.out.println("!!! Bug status has changed !!!");
+    }
+
+    @Override
+    public int compareTo(Bug bug) {
+       return this.getBugDescription().compareTo(bug.getBugDescription());
     }
 }
